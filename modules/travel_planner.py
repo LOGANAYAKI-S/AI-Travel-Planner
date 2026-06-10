@@ -1,6 +1,6 @@
 from groq import Groq
 
-client = Groq(api_key="YOUR_API_KEY")
+client = Groq(api_key="GROQ_API_KEY")
 
 def generate_travel_plan(start_location, destination, budget, days, travel_type):
 
