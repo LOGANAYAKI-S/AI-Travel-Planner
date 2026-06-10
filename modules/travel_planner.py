@@ -1,18 +1,43 @@
 from groq import Groq
 
-client = Groq(api_key="Your_Grog_API_Key")
+client = Groq(api_key="YOUR_API_KEY")
 
-def generate_travel_plan(destination, budget, days):
+def generate_travel_plan(start_location, destination, budget, days, travel_type):
 
     prompt = f"""
-    Create a travel itinerary.
+Create a travel itinerary.
 
-    Destination: {destination}
-    Budget: {budget}
-    Days: {days}
+Starting Location: {start_location}
+Destination: {destination}
+Budget: {budget}
+Days: {days}
+Travel Type: {travel_type}
 
-    Give a day-by-day travel plan.
-    """
+Generate a detailed day-by-day travel plan.
+
+Include:
+- Places to visit
+- Activities
+- Food recommendations
+- Travel tips
+
+After the itinerary, suggest 3 suitable hotels based on the selected budget.
+
+Also provide a packing checklist for the trip.
+
+Also suggest 5 famous local foods that travelers should try at the destination.
+
+Also provide an estimated trip cost.
+
+Include:
+- Hotel Cost
+- Food Cost
+- Transport Cost
+- Activity Cost
+- Total Estimated Cost
+
+Show the cost in Indian Rupees (₹).
+"""
 
     response = client.chat.completions.create(
         model="llama-3.1-8b-instant",
