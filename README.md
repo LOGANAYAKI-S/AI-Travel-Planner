@@ -1,29 +1,45 @@
 # AI Travel Planner
 
-A beginner AI Travel Planner application developed using 
-Python and Streamlit.
+AI Travel Planner is an AI-powered web application built using Python, 
+Streamlit, and Groq AI. The application helps users create personalized 
+travel plans based on their destination, budget, travel type, and trip duration.
 
 ## Features
 
-* Destination Input
-* Budget Selection
-* Trip Duration Planning
-* Travel Plan Generation
-
+* Personalized travel itinerary generation
+* Hotel recommendations
+* Packing checklist
+* Estimated trip cost
+* Local food recommendations
+* Starting location support
+ 
 ## Technologies Used
 
 * Python
 * Streamlit
+* Groq API
+  
+## Project Structure
 
-## Project Status
+AI-Travel-Planner/
+├── app.py
+├── requirements.txt
+├── modules/
+│   └── travel_planner.py
+└── README.md
 
-Version 1 Completed. 
+## How to Run
 
-## Future Enhancements:
+Install required packages:
+pip install -r requirements.txt
 
-* Hotel Suggestions
-* Weather Information
-* Packing Checklist
-* Travel Agent Workflow
-* Google ADK Concepts Integration
+Run the application:
+streamlit run app.py
 
+## Project Outcome
+The application helps users plan trips more efficiently by providing travel itineraries,
+accommodation suggestions, packing recommendations, local food suggestions, and estimated 
+travel costs in a single platform.
+
+## Deployment
+The project has been successfully deployed as a public web application using Streamlit.
